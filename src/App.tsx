@@ -1,8 +1,10 @@
 import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
-import HowToHelp from "./components/howToHelp";
+import Psychotherapy from "./components/psychotherapy";
 import Process from "./components/process";
+import Workshops from "./components/workshops";
+import Footer from './components/footer';
 import "./App.css";
 import { useState } from "react";
 
@@ -15,9 +17,11 @@ function App() {
       <main className="flex-1">
         <Home headerHeight={headerHeight} />
         <About />
-        <HowToHelp />
+        <Psychotherapy />
         <Process />
+        <Workshops />
       </main>
+      <Footer />
     </div>
   );
 }

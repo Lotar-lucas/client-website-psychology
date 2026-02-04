@@ -42,11 +42,10 @@ const Header = ({ onHeightChange }: HeaderProps) => {
         <nav>
           <ul className="flex gap-5 justify-end whitespace-nowrap">
             <li>
-              <a
-                href="#"
-                className="px-4 py-2 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-white hover:font-bold transition-colors"
-              >
-                Início
+              <a href="home"
+                className="px-4 py-2 rounded-full text-yellow-300 hover:bg-yellow-400 hover:text-white 
+                  hover:font-bold transition-colors"
+              >Início
               </a>
             </li>
 
