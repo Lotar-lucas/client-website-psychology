@@ -8,7 +8,7 @@ const Process = () => {
   return (
     <section
       id="psychotherapy"
-      className="flex  flex-col justify-center bg-[#9db6cc] w-full px-6 py-8"
+      className="flex flex-col justify-center bg-[#9db6cc] w-full px-6 py-8"
     >
       <div className="flex justify-around items-center max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col justify-center items-center gap-8 w-full" data-aos="fade-up">
@@ -18,7 +18,7 @@ const Process = () => {
             Como funciona a psicoterapia
           </h2>
 
-          <p className=" text-lg text-justify text-blue-900 max-w-4xl leading-normal">
+          <p className="text-lg text-justify text-blue-900 max-w-4xl leading-normal">
             A psicoterapia é um espaço de cuidado, reflexão e transformação. Não se trata de dar conselhos
             ou soluções prontas, mas de criar condições para que você possa compreender suas questões,
             desenvolver recursos internos e construir caminhos saudáveis e autênticos.
