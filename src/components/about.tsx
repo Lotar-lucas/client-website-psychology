@@ -23,21 +23,21 @@ const About = () => {
 
           <div className="flex justify-start items-start bg-[#9db6cc] max-w-3xl">
             <div className="flex flex-col gap-4">
-              <h1 className="text-5xl text-left font-serif font-bold text-blue-900 leading-tight">
+              <h1 className="text-5xl text-left font-serif font-bold text-[#003366] leading-tight">
                 Um pouco sobre quem sou e a psicóloga que me tornei
               </h1>
 
-              <p className="text-lg text-justify pt-5">
+              <p className="text-lg text-justify pt-5 text-[#003366] ">
                 Me chamo Thais, sou psicóloga e escolhi a Psicologia pelo desejo de escutar, acolher e caminhar
                 junto com as pessoas em momentos importantes da vida.
               </p>
 
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify text-[#003366]">
                 Desde a graduação, sempre tive curiosidade em aprender além das aulas, participando de diferentes 
                 atividades e experiências.
               </p>
 
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify text-[#003366]">
                 Esse interesse me aproximou da Psicologia Econômica, área que ampliou meu olhar sobre o comportamento humano e
                 sobre a forma como nos relacionamos com o dinheiro.
               </p>
@@ -51,18 +51,18 @@ const About = () => {
       <div className="flex justify-center max-w-9xl px-6 pt-2">
         <div className="flex flex-col gap-4 max-w-6xl" data-aos="fade-up">
 
-          <p className="text-lg text-justify">
+          <p className="text-lg text-justify text-[#003366]">
             As demandas que chegam até mim são diversas e únicas. Não falam apenas de dinheiro, mas de emoções, histórias,
             inseguranças e expectativas. Tudo isso faz parte da escuta, sem rótulos, com respeito e sem julgamentos.
           </p>
 
-          <p className="text-lg text-justify">
+          <p className="text-lg text-justify text-[#003366]">
             Acompanho adolescentes e adultos em diferentes momentos da vida, oferecendo um espaço seguro para conversar,
             refletir e cuidar da saúde emocional. Minha atuação é guiada pela ética, pelo compromisso com o sigilo e pelo
             respeito à autonomia de cada pessoa.
           </p>
 
-          <p className="text-lg text-justify">
+          <p className="text-lg text-justify text-[#003366]">
             Acredito em um trabalho próximo, acessível e humano, baseado no diálogo e na construção de vínculo. Buscar
             apoio psicológico é um gesto de cuidado consigo mesmo(a).
           </p>
@@ -76,7 +76,7 @@ const About = () => {
 
             <div className="bg-yellow-400 px-3 py-1 rounded-full hover:bg-yellow-500 transition-colors">
               <button className="text-white font-semibold">
-                Gostaria de falar comigo? clica aqui
+                Gostaria de falar comigo? Clica aqui
               </button>
             </div>
           </div>
