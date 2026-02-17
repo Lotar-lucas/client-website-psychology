@@ -38,17 +38,17 @@ const Home = ({ headerHeight }: HomeProps) => {
 
             {/* Botões Desktop */}
             <div className="hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 lg:pt-8">
-              <button className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
-                rounded-full hover:bg-yellow-500 transition-colors">
+              <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
+                rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
 
                 <span className='text-sm sm:text-base lg:text-lg'>Saiba mais sobre mim</span>
-              </button>
+              </a>
 
-              <button className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 
-                rounded-full hover:bg-yellow-500 transition-colors">
+              <a href="#contact" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
+                rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
 
                 <span className='text-sm sm:text-base lg:text-lg'>Entre em contato</span>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -86,15 +86,15 @@ const Home = ({ headerHeight }: HomeProps) => {
 
           {/* Botões Mobile */}
           <div className="flex lg:hidden flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
-            <button className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-full
-            hover:bg-yellow-500 transition-colors">
+            <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
+            hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
               <span className='text-sm sm:text-base'>Saiba mais sobre mim</span>
-            </button>
+            </a>
 
-            <button className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-full
-            hover:bg-yellow-500 transition-colors">
+            <a href="#contact" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
+            hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
               <span className='text-sm sm:text-base'>Entre em contato</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
