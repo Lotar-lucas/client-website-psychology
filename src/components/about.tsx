@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormationModal from "./formationModal";
+import { WHATSAPP } from '../config/contact';
 
 const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -8,76 +9,76 @@ const About = () => {
   <>
     <section
       id="about"
-      className="flex justify-center bg-[#9db6cc] w-full px-6 pt-8"
+      className="flex justify-center bg-[#9db6cc] w-full px-2 xs:px-3 sm:px-6"
+      style={{ minHeight: '100vh' }}
     >
-      <div className="flex justify-center items-start max-w-9xl px-6 pt-2">
-        <div className="flex justify-center items-start gap-8 max-w-7xl" data-aos="fade-up">
-          <div className="md:w-1/2 flex flex-col justify-start items-start md:items-center" data-aos="zoom-in" >
-            <img
-            src="/Thais.jpeg"
-            alt="Foto de perfil"
-            className="w-94 h-94 object-cover rounded-xl shadow-lg border-3 border-yellow-400 hover:scale-105
-            transition-transform duration-300"
-            />
-          </div>
+      <div className="flex items-center max-w-350 h-full pt-6 sm:pt-12 lg:pt-16 pb-6 sm:pb-9">
+        <div className="flex flex-col w-full gap-8 sm:gap-12">
 
-          <div className="flex justify-start items-start bg-[#9db6cc] max-w-3xl">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-5xl text-left font-serif font-bold text-blue-900 leading-tight">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8">
+            <div className="shrink-0 relative z-10 p-3" data-aos="fade-right">
+              <img
+              src="/Thais.jpeg"
+              alt="Foto de perfil"
+              className="w-64 h-64 sm:w-80 sm:h-80 lg:w-94 lg:h-94 object-cover rounded-xl shadow-lg border-3 border-yellow-400 hover:scale-105 transition-transform duration-500 ease-in-out"
+              />
+            </div>
+
+            <div className="flex flex-col gap-3 sm:gap-4" data-aos="fade-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center lg:text-left font-serif font-bold text-[#003366] leading-tight">
                 Um pouco sobre quem sou e a psicóloga que me tornei
               </h1>
 
-              <p className="text-lg text-justify pt-5">
+              <p className="text-sm sm:text-base lg:text-lg text-justify pt-2 sm:pt-3 lg:pt-5 text-[#003366] ">
                 Me chamo Thais, sou psicóloga e escolhi a Psicologia pelo desejo de escutar, acolher e caminhar
                 junto com as pessoas em momentos importantes da vida.
               </p>
 
-              <p className="text-lg text-justify">
-                Desde a graduação, sempre tive curiosidade em aprender além das aulas, participando de diferentes 
+              <p className="text-sm sm:text-base lg:text-lg text-justify text-[#003366]">
+                Desde a graduação, sempre tive curiosidade em aprender além das aulas, participando de diferentes
                 atividades e experiências.
               </p>
 
-              <p className="text-lg text-justify">
+              <p className="text-sm sm:text-base lg:text-lg text-justify text-[#003366]">
                 Esse interesse me aproximou da Psicologia Econômica, área que ampliou meu olhar sobre o comportamento humano e
                 sobre a forma como nos relacionamos com o dinheiro.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section className="flex justify-center bg-[#9db6cc] px-6 pb-8 pt-5">
-      <div className="flex justify-center max-w-9xl px-6 pt-2">
-        <div className="flex flex-col gap-4 max-w-6xl" data-aos="fade-up">
+          <div className="flex flex-col gap-3 sm:gap-4" data-aos="fade-up">
+            <p className="text-sm sm:text-base lg:text-lg text-justify text-[#003366]">
+              As demandas que chegam até mim são diversas e únicas. Não falam apenas de dinheiro, mas de emoções, histórias,
+              inseguranças e expectativas. Tudo isso faz parte da escuta, sem rótulos, com respeito e sem julgamentos.
+            </p>
 
-          <p className="text-lg text-justify">
-            As demandas que chegam até mim são diversas e únicas. Não falam apenas de dinheiro, mas de emoções, histórias,
-            inseguranças e expectativas. Tudo isso faz parte da escuta, sem rótulos, com respeito e sem julgamentos.
-          </p>
+            <p className="text-sm sm:text-base lg:text-lg text-justify text-[#003366]">
+              Acompanho adolescentes e adultos em diferentes momentos da vida, oferecendo um espaço seguro para conversar,
+              refletir e cuidar da saúde emocional. Minha atuação é guiada pela ética, pelo compromisso com o sigilo e pelo
+              respeito à autonomia de cada pessoa.
+            </p>
 
-          <p className="text-lg text-justify">
-            Acompanho adolescentes e adultos em diferentes momentos da vida, oferecendo um espaço seguro para conversar,
-            refletir e cuidar da saúde emocional. Minha atuação é guiada pela ética, pelo compromisso com o sigilo e pelo
-            respeito à autonomia de cada pessoa.
-          </p>
+            <p className="text-sm sm:text-base lg:text-lg text-justify text-[#003366]">
+              Acredito em um trabalho próximo, acessível e humano, baseado no diálogo e na construção de vínculo. Buscar
+              apoio psicológico é um gesto de cuidado consigo mesmo(a).
+            </p>
 
-          <p className="text-lg text-justify">
-            Acredito em um trabalho próximo, acessível e humano, baseado no diálogo e na construção de vínculo. Buscar
-            apoio psicológico é um gesto de cuidado consigo mesmo(a).
-          </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 pt-4">
+              <a href="#" onClick={(e) => { e.preventDefault(); setIsModalOpen(true); }}
+                className="inline-block text-center bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg
+                hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out w-64 sm:w-72 lg:w-80 whitespace-normal sm:whitespace-nowrap">
 
-          <div className="flex justify-end items-center gap-9 pt-4 ">
-            <div className="bg-yellow-400 px-3 py-1 rounded-full hover:bg-yellow-500 transition-colors">
-              <button className="text-white font-semibold" onClick={() => setIsModalOpen(true)}>
-                Minha Formação
-              </button>
-            </div>
+                <span className='text-sm sm:text-sm lg:text-base'>Minha Formação</span>
+              </a>
 
-            <div className="bg-yellow-400 px-3 py-1 rounded-full hover:bg-yellow-500 transition-colors">
-              <button className="text-white font-semibold">
-                Gostaria de falar comigo? clica aqui
-              </button>
+              <a href={WHATSAPP.profile}
+                target="_blank"
+                className="inline-block text-center bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-5 sm:py-2.5
+                rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out
+                w-64 sm:w-72 lg:w-80 whitespace-normal sm:whitespace-nowrap"
+              >
+                <span className='text-sm sm:text-sm lg:text-base'>Gostaria de falar comigo? Clica aqui</span>
+              </a>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "./components/header";
 import Home from "./components/home";
 import About from "./components/about";
@@ -6,16 +7,27 @@ import Process from "./components/process";
 import Workshops from "./components/workshops";
 import Footer from './components/footer';
 import "./App.css";
-import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-  const [headerHeight, setHeaderHeight] = useState(88);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1300,
+      once: true,
+      easing: "ease-out-cubic",
+      startEvent: "load",
+    });
+    window.addEventListener("load", AOS.refresh);
+    return () => window.removeEventListener("load", AOS.refresh);
+  }, []);
 
   return (
-    <div className="flex flex-col scroll-smooth">
-      <Header onHeightChange={setHeaderHeight} />
+    <div className="flex flex-col scroll-smooth overflow-x-hidden w-full">
+      <Header />
       <main className="flex-1">
-        <Home headerHeight={headerHeight} />
+        <Home />
         <About />
         <Psychotherapy />
         <Process />

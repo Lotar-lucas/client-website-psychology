@@ -1,30 +1,30 @@
 import { Heart, Lock } from 'lucide-react';
 import { FaCheckCircle, FaHandshake } from 'react-icons/fa';
+import { WHATSAPP } from '../config/contact';
 
-interface HomeProps {
-  headerHeight: number;
-}
 
-const Home = ({ headerHeight }: HomeProps) => {
+const Home = () => {
   return (
     <section
       id="home"
-      className="flex justify-center bg-[#eff0ec] w-full px-6"
-      style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
+      className="flex justify-center bg-[#eff0ec] w-full px-2 xs:px-3 sm:px-6 pt-16 sm:pt-20 md:pt-24"
     >
-      <div className="flex justify-around items-center max-w-7xl h-full pt-10 pb-9">
-        <div className="flex justify-center items-center gap-12" data-aos="fade-up">
-          <div className="flex-2 text-left flex flex-col justify-between gap-4">
-            <div className="flex flex-col gap-4">
-              <span className="text-lg text-blue-900 font-medium">
+      <div className="flex justify-around items-center max-w-350 h-full pb-6 sm:pb-9">
+        <div
+          className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-12 w-full"
+        >
+          <div className="w-full lg:flex-2 text-left flex flex-col justify-between gap-3 sm:gap-4" data-aos="fade-right">
+            <div className="flex flex-col gap-3 sm:gap-2">
+              <span className="text-sm sm:text-base lg:text-lg text-[#003366] font-medium">
                 Seja bem-vindo(a)!
               </span>
 
-              <h1 className="text-5xl font-serif font-bold text-blue-900 leading-tight pt-12">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-[#003366]
+              leading-tight pt-4 sm:pt-8 lg:pt-12">
                 Um espaço de acolhimento para cuidar da sua saúde mental
               </h1>
 
-              <p className="text-lg text-blue-900 text-left pt-8">
+              <p className="text-sm sm:text-base lg:text-lg text-[#003366] text-left pt-4 sm:pt-6 lg:pt-8">
                 A psicoterapia é um espaço de autoconhecimento, cuidado emocional
                 e desenvolvimento pessoal. Aqui, você encontra um ambiente seguro
                 e respeitoso para compartilhar suas experiências e construir novas
@@ -32,43 +32,69 @@ const Home = ({ headerHeight }: HomeProps) => {
               </p>
             </div>
 
-            <div className="flex gap-4 pt-8">
-              <button className="bg-yellow-400 text-white font-semibold rounded-4xl hover:bg-yellow-500 transition-colors">
-                <span className='text-lg'>Saiba mais sobre mim</span>
-              </button>
+            {/* Botões Desktop */}
+            <div className="hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 lg:pt-8 pb-3 px-3">
+              <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
+                rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
 
-              <button className="bg-yellow-400 text-white font-semibold rounded-4xl hover:bg-yellow-500 transition-colors">
-                <span className='text-lg'>Entre em contato</span>
-              </button>
+                <span className='text-sm sm:text-base lg:text-lg'>Saiba mais sobre mim</span>
+              </a>
+
+              <a href={WHATSAPP.schedule}
+                target="_blank"
+                className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
+                rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
+
+                <span className='text-sm sm:text-base lg:text-lg'>Entre em contato</span>
+              </a>
             </div>
           </div>
 
-          <div className="flex-2 flex items-center">
-              <div className="grid grid-cols-2 gap-8 w-full pt-28">
-                <div className="bg-[#9db6cc] rounded-3xl p-2 flex flex-col items-center justify-center text-center min-h-25">
-                  <Heart className="w-13 h-13 text-yellow-400" />
+          <div className="w-full lg:flex-2 flex items-center justify-center" data-aos="fade-left">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 w-full pt-8 sm:pt-16 lg:pt-28">
+                <div className="bg-[#9db6cc] rounded-2xl sm:rounded-3xl p-3 sm:p-3 lg:p-4
+                flex flex-col items-center justify-center text-center min-h-20 sm:min-h-24 lg:min-h-20">
+                  <Heart className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-yellow-400" />
 
-                  <h3 className="text-base font-bold text-blue-900">Acolhimento</h3>
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-blue-900 mt-2">Acolhimento</h3>
                 </div>
 
-                <div className="bg-[#9db6cc] rounded-3xl p-2 flex flex-col items-center justify-center text-center min-h-25">
-                  <Lock className="w-13 h-13 text-[#7b9f6b]" />
+                <div className="bg-[#9db6cc] rounded-2xl sm:rounded-3xl p-3 sm:p-3 lg:p-4
+                flex flex-col items-center justify-center text-center min-h-20 sm:min-h-24 lg:min-h-20">
+                  <Lock className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-[#7b9f6b]" />
 
-                  <h3 className="text-base font-bold text-blue-900">Sigilo</h3>
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-blue-900 mt-2">Sigilo</h3>
                 </div>
 
-                <div className="bg-[#9db6cc] rounded-3xl p-2 flex flex-col items-center justify-center text-center min-h-25">
-                  <FaCheckCircle className="w-13 h-13 text-white" />
+                <div className="bg-[#9db6cc] rounded-2xl sm:rounded-3xl p-3 sm:p-3 lg:p-4
+                flex flex-col items-center justify-center text-center min-h-20 sm:min-h-24 lg:min-h-20">
+                  <FaCheckCircle className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
 
-                  <h3 className="text-base font-bold text-blue-900">Escuta Qualificada</h3>
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-blue-900 mt-2">Escuta Qualificada</h3>
                 </div>
 
-                <div className="bg-[#9db6cc] rounded-3xl p-2 flex flex-col items-center justify-center text-center min-h-25">
-                  <FaHandshake className="w-13 h-13 text-[#003366]" />
+                <div className="bg-[#9db6cc] rounded-2xl sm:rounded-3xl p-3 sm:p-3 lg:p-4
+                flex flex-col items-center justify-center text-center min-h-20 sm:min-h-24 lg:min-h-20">
+                  <FaHandshake className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-[#003366]" />
 
-                  <h3 className="text-base font-bold text-blue-900">Respeito</h3>
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-blue-900 mt-2">Respeito</h3>
                 </div>
               </div>
+          </div>
+
+          {/* Botões Mobile */}
+          <div className="flex lg:hidden flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 pb-3 px-3" data-aos="fade-right">
+            <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
+            hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
+              <span className='text-sm sm:text-base'>Saiba mais sobre mim</span>
+            </a>
+
+            <a href={WHATSAPP.schedule}
+              target="_blank"
+              className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
+            hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
+              <span className='text-sm sm:text-base'>Entre em contato</span>
+            </a>
           </div>
         </div>
       </div>

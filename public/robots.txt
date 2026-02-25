@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psithaispazzin.com.br/sitemap.xml
