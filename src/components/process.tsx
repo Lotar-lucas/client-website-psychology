@@ -1,6 +1,7 @@
 import { FaAssistiveListeningSystems, FaHandshake } from "react-icons/fa";
 import { BsFlower1 } from "react-icons/bs";
 import { CiClock2 } from "react-icons/ci";
+import { WHATSAPP } from '../config/contact';
 
 
 
@@ -145,9 +146,10 @@ const Process = () => {
 
           <div className="mt-6 sm:mt-8">
             <a
-              href="#contact"
-              className="inline-block bg-yellow-400 text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3
-              sm:py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              href={WHATSAPP.process}
+              target="_blank"
+              className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:bg-yellow-500
+                hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center"
             >
               Se identificou comigo e com o meu trabalho? Me chama!
             </a>

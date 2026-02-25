@@ -4,9 +4,9 @@ const Workshops = () => {
   return (
     <section
       id="workshops"
-      className="flex flex-col justify-center bg-[#eff0ec] px-4 sm:px-6 py-6 sm:py-8 lg:py-12"
+      className="flex flex-col justify-center bg-[#eff0ec] px-4 sm:px-6 py-3 sm:py-8 lg:py-12"
     >
-      <div className="flex items-center max-w-350 mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <div className="flex items-center max-w-350 mx-auto px-4 sm:px-6 py-6 sm:py-2">
         <div className="flex flex-col items-center gap-4 sm:gap-6" data-aos="fade-up">
           <span className="text-yellow-400 font-bold text-base sm:text-lg">
             Palestras, Workshops e Oficinas

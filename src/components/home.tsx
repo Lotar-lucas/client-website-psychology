@@ -1,23 +1,19 @@
 import { Heart, Lock } from 'lucide-react';
 import { FaCheckCircle, FaHandshake } from 'react-icons/fa';
+import { WHATSAPP } from '../config/contact';
 
-interface HomeProps {
-  headerHeight: number;
-}
 
-const Home = ({ headerHeight }: HomeProps) => {
+const Home = () => {
   return (
     <section
       id="home"
-      className="flex justify-center bg-[#eff0ec] w-full px-2 xs:px-3 sm:px-6"
-      style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
+      className="flex justify-center bg-[#eff0ec] w-full px-2 xs:px-3 sm:px-6 pt-16 sm:pt-20 md:pt-24"
     >
-      <div className="flex justify-around items-center max-w-350 h-full pt-8 sm:pt-12 lg:pt-20 pb-6 sm:pb-9">
+      <div className="flex justify-around items-center max-w-350 h-full pb-6 sm:pb-9">
         <div
           className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-12 w-full"
-          data-aos="fade-up"
         >
-          <div className="w-full lg:flex-2 text-left flex flex-col justify-between gap-3 sm:gap-4">
+          <div className="w-full lg:flex-2 text-left flex flex-col justify-between gap-3 sm:gap-4" data-aos="fade-right">
             <div className="flex flex-col gap-3 sm:gap-2">
               <span className="text-sm sm:text-base lg:text-lg text-[#003366] font-medium">
                 Seja bem-vindo(a)!
@@ -37,14 +33,16 @@ const Home = ({ headerHeight }: HomeProps) => {
             </div>
 
             {/* Botões Desktop */}
-            <div className="hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 lg:pt-8">
+            <div className="hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 lg:pt-8 pb-3 px-3">
               <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
                 rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
 
                 <span className='text-sm sm:text-base lg:text-lg'>Saiba mais sobre mim</span>
               </a>
 
-              <a href="#contact" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
+              <a href={WHATSAPP.schedule}
+                target="_blank"
+                className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3
                 rounded-lg hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
 
                 <span className='text-sm sm:text-base lg:text-lg'>Entre em contato</span>
@@ -52,7 +50,7 @@ const Home = ({ headerHeight }: HomeProps) => {
             </div>
           </div>
 
-          <div className="w-full lg:flex-2 flex items-center justify-center">
+          <div className="w-full lg:flex-2 flex items-center justify-center" data-aos="fade-left">
               <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 w-full pt-8 sm:pt-16 lg:pt-28">
                 <div className="bg-[#9db6cc] rounded-2xl sm:rounded-3xl p-3 sm:p-3 lg:p-4
                 flex flex-col items-center justify-center text-center min-h-20 sm:min-h-24 lg:min-h-20">
@@ -85,13 +83,15 @@ const Home = ({ headerHeight }: HomeProps) => {
           </div>
 
           {/* Botões Mobile */}
-          <div className="flex lg:hidden flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
+          <div className="flex lg:hidden flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 pb-3 px-3" data-aos="fade-right">
             <a href="#about" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
             hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
               <span className='text-sm sm:text-base'>Saiba mais sobre mim</span>
             </a>
 
-            <a href="#contact" className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
+            <a href={WHATSAPP.schedule}
+              target="_blank"
+              className="bg-yellow-400 text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded-lg
             hover:bg-yellow-500 hover:scale-110 hover:shadow-lg transition-all duration-500 ease-in-out inline-block text-center">
               <span className='text-sm sm:text-base'>Entre em contato</span>
             </a>

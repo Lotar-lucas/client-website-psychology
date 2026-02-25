@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -9,8 +8,43 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
   }
 }
+
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+  scrollbar-gutter: stable;
+}
+
+/* Garante que nenhum elemento AOS cause overflow horizontal */
+[data-aos] {
+  overflow-x: clip;
+}
+
+/* Aumenta a distância do fade-right/fade-left para vir das bordas da tela */
+[data-aos="fade-right"] {
+  transform: translate3d(var(--aos-distance, -60vw), 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(var(--aos-distance, 60vw), 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
 
 :root {
   font-family: var(--font-sans);
@@ -34,8 +68,87 @@ a {
 
 body {
   margin: 0;
-  min-width: 320px;
   min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuOpen {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes menuClose {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
 }
 
 h1 {

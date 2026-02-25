@@ -22,7 +22,9 @@ const Psychotherapy = () => {
           </span>
 
           <div className="flex flex-col lg:flex-row justify-around items-start gap-8 lg:gap-15 pt-4 sm:pt-5 w-full">
-            <div className="flex flex-col items-start gap-3 sm:gap-4 flex-1 w-full">
+            <div className="flex flex-col items-start gap-3 sm:gap-4 flex-1 w-full"
+              data-aos="fade-right"
+            >
               <div className="bg-[#9db6cc] text-[#003366] font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-[#8ca5bb] transition-colors flex items-center gap-2">
                 <FiUsers className="w-5 h-5" />
 
@@ -71,7 +73,9 @@ const Psychotherapy = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-3 sm:gap-4 flex-1 w-full">
+            <div className="flex flex-col items-start gap-3 sm:gap-4 flex-1 w-full"
+              data-aos="fade-left"
+            >
               <div className="bg-[#9db6cc] text-[#003366] font-semibold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-[#8ca5bb] transition-colors flex items-center gap-2">
                 <BiLaptop className="w-5 h-5" />
 

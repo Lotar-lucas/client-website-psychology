@@ -1,29 +1,53 @@
 import { FaGraduationCap } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
+import { useState } from "react";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const CLOSE_ANIMATION_DURATION = 250;
+
 const FormationModal = ({ isOpen, onClose }: ModalProps) => {
+  const [isClosing, setIsClosing] = useState(false);
+  const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  if (isOpen !== prevIsOpen) {
+    setPrevIsOpen(isOpen);
+    if (isOpen) setIsClosing(false);
+  }
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(onClose, CLOSE_ANIMATION_DURATION);
+  };
+
   if (!isOpen) return null;
+
+  const backdropAnimation = isClosing
+    ? "animate-[fadeOut_0.15s_ease-in_forwards]"
+    : "animate-[fadeIn_0.15s_ease-out]";
+
+  const modalAnimation = isClosing
+    ? "animate-[scaleOut_0.25s_ease-in_forwards]"
+    : "animate-[scaleIn_0.3s_ease-out]";
 
   return (
     // Backdrop com blur
     <div
-      className="fixed inset-0 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
-      onClick={onClose}
+      className={`fixed inset-0 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto ${backdropAnimation}`}
+      onClick={handleClose}
     >
       <div
-        className="bg-[#eff0ec] w-full md:w-[90%] lg:w-[80%] max-w-7xl rounded-lg shadow-2xl my-8 px-4 sm:px-6 py-6 sm:py-8 max-h-[90vh] overflow-y-auto"
+        className={`bg-[#eff0ec] w-full md:w-[90%] lg:w-[80%] max-w-7xl rounded-lg shadow-2xl my-8 px-4 sm:px-6 py-6 sm:py-8 max-h-[90vh] overflow-y-auto ${modalAnimation}`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col items-center">
           {/* Botão fechar - mobile */}
           <div className="flex justify-end mb-4 md:hidden">
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="text-yellow-400 hover:text-yellow-500"
             >
               <IoMdCloseCircle className="w-8 h-8" />
@@ -39,7 +63,7 @@ const FormationModal = ({ isOpen, onClose }: ModalProps) => {
 
             {/* Botão fechar - desktop */}
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="hidden md:block absolute right-0 top-0 text-yellow-400 hover:text-yellow-500"
             >
               <IoMdCloseCircle className="w-10 h-10" />
@@ -127,7 +151,7 @@ const FormationModal = ({ isOpen, onClose }: ModalProps) => {
           </div>
 
           <div className="py-3 px-4 sm:py-4 sm:px-8 mt-2">
-            <p className="text-sm sm:text-base lg:text-lg font-bold text-center text-[#ebc363]">
+            <p className="text-sm sm:text-base lg:text-lg font-bold text-center text-yellow-400">
               Toda essa trajetória sustenta minha atuação clínica, guiada pela ética, pelo compromisso
               com o sigilo e pelo cuidado em oferecer um espaço seguro, humano e responsável.
             </p>
