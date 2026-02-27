@@ -17,10 +17,14 @@ function App() {
       duration: 1300,
       once: true,
       easing: "ease-out-cubic",
-      startEvent: "load",
+      offset: 50,
     });
-    window.addEventListener("load", AOS.refresh);
-    return () => window.removeEventListener("load", AOS.refresh);
+
+    const rafId = requestAnimationFrame(() => {
+      AOS.refresh();
+    });
+
+    return () => cancelAnimationFrame(rafId);
   }, []);
 
   return (
