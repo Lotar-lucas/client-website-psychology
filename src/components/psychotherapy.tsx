@@ -36,7 +36,7 @@ const Psychotherapy = () => {
                   <div className="shrink-0 w-3 h-3 bg-[#9db6cc] rounded-full hover:bg-[#8ca5bb] transition-colors mt-1 sm:mt-2" />
 
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-bold text-base sm:text-lg text-[#003366] text-start">Adolescentes (a partir de 14 anos)</h3>
+                    <h3 className="font-bold text-base sm:text-lg text-[#003366] text-start">Adolescentes</h3>
 
                     <p className="text-xs sm:text-sm text-justify text-[#003366] leading-normal">
                       Questões sobre quem sou, autoestima, relações com a família e amigos, inseguranças, escola,
